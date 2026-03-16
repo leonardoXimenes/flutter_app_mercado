@@ -27,12 +27,14 @@ class GroceryItemTile extends StatelessWidget {
           // image
           Image.asset(
             imagePath,
-            height: 64,),
+            height: 64,
+            ),
       
           //item name
-          //----------------------- tempo do video 12:27----------------------------------------
-      
+          Text(itemName),
+
           // price + button
+
         ],),
       ),
     );

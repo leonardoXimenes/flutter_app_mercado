@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
         
             //divider
              const Padding(
-              padding: const EdgeInsets.symmetric(horizontal:  8.0),
+              padding: EdgeInsets.symmetric(horizontal:  8.0),
               child: Divider(),
               ),
 

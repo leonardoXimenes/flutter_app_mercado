@@ -10,5 +10,5 @@ class CartModel extends ChangeNotifier{
     ["Agua", "1.00", "images/agua.png", Colors.blue],
   ];
 
-  get shopItems => _shopItems;
+  List<dynamic> get shopItems => _shopItems;
 }
