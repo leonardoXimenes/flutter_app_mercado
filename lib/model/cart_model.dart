@@ -10,5 +10,17 @@ class CartModel extends ChangeNotifier{
     ["Agua", "1.00", "images/agua.png", Colors.blue],
   ];
 
-  List<dynamic> get shopItems => _shopItems;
+  //list of cart items
+  List _cartItems = [];
+  
+   get shopItems => _shopItems;
+
+   get cartItems => _cartItems;
+
+   // add item to cart
+
+   // remove item from cart
+
+   //calculate total price
 }
+// tempo do video 14:48
