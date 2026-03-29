@@ -26,9 +26,16 @@ class CartModel extends ChangeNotifier{
    // remove item from cart
    void removeItemFromCart(int index){
     _cartItems.removeAt(index);
+    notifyListeners();
    }
 
-
    //calculate total price
+   String calculateTotal(){
+    double totalPrice = 0;
+    for (int i = 0; i < cartItems.length; i++) {
+      totalPrice += double.parse(_cartItems[i] [1]);
+    }
+    return totalPrice.toStringAsFixed(2);
+   }
 }
 // tempo do video 15:20
