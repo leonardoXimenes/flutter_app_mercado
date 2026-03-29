@@ -18,9 +18,17 @@ class CartModel extends ChangeNotifier{
    get cartItems => _cartItems;
 
    // add item to cart
+   void addItemToCart(int index){
+    _cartItems.add(_shopItems[index]);
+    notifyListeners();
+   }
 
    // remove item from cart
+   void removeItemFromCart(int index){
+    _cartItems.removeAt(index);
+   }
+
 
    //calculate total price
 }
-// tempo do video 14:48
+// tempo do video 15:20
