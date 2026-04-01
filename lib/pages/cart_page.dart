@@ -16,9 +16,10 @@ class CartPage extends StatelessWidget {
         children: [
         Expanded(
           child: ListView.builder(
+            itemCount: value.cartItems.length,
           itemBuilder: (context, index){
             return ListTile(
-              title: Text('item'), 
+              title: Text(value.cartItems[0]), 
             );
         },
         ),
@@ -29,4 +30,3 @@ class CartPage extends StatelessWidget {
     );
   }
 }
-// tempo de video 16:51
