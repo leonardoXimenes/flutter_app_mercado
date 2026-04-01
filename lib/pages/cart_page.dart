@@ -36,7 +36,7 @@ class CartPage extends StatelessWidget {
                     icon:  Icon(Icons.cancel),
                     onPressed: () => 
                       Provider.of<CartModel>(context,listen: false)
-                      .removeItemFromCart(index), // tempo do video 18:23
+                      .removeItemFromCart(index),                       // tempo do video 18:23
                     ),
                 ),
               ),
