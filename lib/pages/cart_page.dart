@@ -13,6 +13,7 @@ class CartPage extends StatelessWidget {
         builder: (context, value, child){
         return Column(
         children: [
+          // list of cart items
         Expanded(
           child: ListView.builder(
             itemCount: value.cartItems.length,
@@ -43,7 +44,64 @@ class CartPage extends StatelessWidget {
             );
         },
         ),
-        )
+        ),
+
+        // total + pay now
+        Padding(
+          padding: const EdgeInsets.all(36.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.green,
+            borderRadius: BorderRadius.circular(8),
+            ),
+            padding: EdgeInsets.all(24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // price 
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Total Price',
+                    style: TextStyle(color: Colors.green[100]),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      '\$' + value.calculateTotal(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                // pay now button
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.green.shade100),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: EdgeInsets.all(12),
+                  child: Row(
+                    children: const[
+                      Text(
+                        "pay now",
+                        style: TextStyle(color: Colors.white),
+                        ),
+                        Icon( 
+                          Icons.arrow_forward_ios, 
+                          size: 16, 
+                          color: Colors.white,
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ],
       );
       },

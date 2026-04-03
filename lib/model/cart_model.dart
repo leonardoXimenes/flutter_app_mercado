@@ -38,4 +38,3 @@ class CartModel extends ChangeNotifier{
     return totalPrice.toStringAsFixed(2);
    }
 }
-// tempo do video 
