@@ -3,7 +3,6 @@ import 'package:flutter_app_mercado/components/grocery_item_tile.dart';
 import 'package:flutter_app_mercado/model/cart_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-
 import 'cart_page.dart';
 
 class HomePage extends StatelessWidget {
